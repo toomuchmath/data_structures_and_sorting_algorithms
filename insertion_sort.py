@@ -18,3 +18,12 @@ my_array = [0, 2, 1, 6, 3, 1]
 sorted_array = insertion_sort(my_array)
 print("sorted array: {}".format(sorted_array))
 
+# Output
+# sorted array: [0, 1, 1, 2, 3, 6]
+
+"""
+    notes:
+    Time complexity: O(n^2) - worst case is when the array is in reverse order
+    Memory consumption: O(n)
+    Invariant: first i entries are sorted
+"""
