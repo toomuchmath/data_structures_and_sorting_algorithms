@@ -18,6 +18,7 @@ my_array = [0, 2, 1, 6, 3, 1]
 sorted_array = insertion_sort(my_array)
 print("sorted array: {}".format(sorted_array))
 
+# hello
 # Output
 # sorted array: [0, 1, 1, 2, 3, 6]
 
