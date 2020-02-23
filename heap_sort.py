@@ -11,14 +11,18 @@ def right(i):  # find the right index of a given index i
 
 
 def max_heapify(array, i):
+
     l = left(i)
     r = right(i)
+
     if l < len(array) and array[l] > array[i]:
         largest = l
     else:
         largest = i
+
     if r < len(array) and array[r] > array[largest]:
         largest = r
+
     if largest != i:
         array[i], array[largest] = array[largest], array[i]
         max_heapify(array, largest)
@@ -27,24 +31,31 @@ def max_heapify(array, i):
 
 
 def build_max_heap(array):
+
     i = (len(array) - 1) // 2
+
     while i >= 0:
         max_heapify(array, i)
         i = i - 1
+
     return array
 
 
 def heap_sort(array):
+
+    sorted_list = []
     build_max_heap(array)
     i = len(array) - 1
-    sorted_list = []
+
     while i >= 1:
         array[0], array[i] = array[i], array[0]
         sorted_list.append(array[i])
         array.pop()
         max_heapify(array, 0)
         i -= 1
+
     sorted_list.append(array[i])
+
     return sorted_list[::-1]
 
 
