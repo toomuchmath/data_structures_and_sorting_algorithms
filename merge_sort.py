@@ -45,6 +45,7 @@ def merge(array, p, q, r):
 
 
 def merge_sort(array, p, r):
+
     if p < r:
         q = math.floor((p + r)/2)
 
@@ -54,14 +55,6 @@ def merge_sort(array, p, r):
 
     return array
 
-"""
-    Description:
-    Suppose we have am array that has been split into two sub-arrays. The split occurred right before q,
-    ie we have got two sub-arrays: array[p, q - 1] and array[q, r]. This function would merge the two sub-arrays 
-    into one.
-"""
-
 
 test = np.array([1, 2, 9, 3, 6, 2, 1, 4])
-arr = [1, 3, 5, 6, 2, 3, 5, 8]
-print(merge_sort(test, 0, 7))
+print(merge_sort(test, 0, len(test) - 1))
