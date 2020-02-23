@@ -40,13 +40,15 @@ def heap_sort(array):
     sorted_list = []
     while i >= 1:
         array[0], array[i] = array[i], array[0]
-        sorted_list
+        sorted_list.append(array[i])
         array.pop()
         max_heapify(array, 0)
-    return array
+        i -= 1
+    sorted_list.append(array[i])
+    return sorted_list[::-1]
 
 
 test = [4, 1, 3, 2, 16, 9, 10, 14, 8, 7]
-print(build_max_heap(test))
+print(heap_sort(test))
 
 
